@@ -145,8 +145,8 @@ int main(){
     srand(time(NULL));
     cout<<"|-----------------------------------|\n";
     cout<<"|-------------INS Practical2--------|\n";
-    cout<<"|--------------Aditi Rathod----------|\n";
-    cout<<"|-----------------20BCE242----------|\n";
+    cout<<"|--------------Harsh Oza----------|\n";
+    cout<<"|-----------------20BCE182----------|\n";
     cout<<"|-----------------------------------|\n\n";
     cout<<"Enter the msg : \n";
     string str;getline(cin,str);
