@@ -71,8 +71,8 @@ int main()
     }
     
     cout<<"-------------INS_Prac1------------------\n";
-    cout<<"-----------ADITI RATHOD-----------------\n";
-    cout<<"-------------20BCE242-------------------\n";
+    cout<<"-----------OZA HARSH-----------------\n";
+    cout<<"-------------20BCE182-------------------\n";
     cout<<"Enter the msg string\n";
     string m;
     getline(cin,m);
