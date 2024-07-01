@@ -38,6 +38,9 @@ int main()
     
     // to count frequency of Element
     cout<<s1.count(24)<<endl;
+
+    // to delete element from set
+    s1.erase(24);
     
     
     // unordered set
@@ -63,6 +66,18 @@ int main()
         cout<<"Element is not found !!!"<<endl;
     }
     
+
+    // multiset
+
+    multiset<int> s1;
+    s1.insert(10);
+    s1.insert(21);
+    s1.insert(21);
+    s1.insert(10);
+    
+    for(auto it:s1){
+        cout<<it<<" ";
+    }
     return 0;
 }
 
