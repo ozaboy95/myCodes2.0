@@ -4,13 +4,20 @@ using namespace std;
 int main()
 {
     //  set 
+    // chadata kram ma gothave
+    // insertion,find,erase -> O(logn)
+    // inbuilt implementation -> Red Black tree
     set<int> s1;
     
     // to insert element
     s1.insert(100);
     s1.insert(24);
     s1.insert(35);
-    s1.insert(50);
+    s1.insert(30);
+    s1.emplace(41);
+    s1.emplace(45);
+    s1.emplace(50);
+    s1.emplace(54);
     
     
     // to print set
@@ -33,6 +40,18 @@ int main()
         cout<<"Element is not found !!!"<<endl;
     }
     
+    // delete
+    // option 1 : Using Iterator
+    // O(logn) + O(1) = O(logn)
+    auto it = s1.find(100);   //O(logn)
+    if(it!=s1.end()){
+      s.erase(it);            //O(1)
+    }
+    
+    // option 2: Using value
+    // O(logn)
+    s1.erase(50); //O(logn)
+    
     // size of set
     cout<<"Size of the set : "<<s1.size()<<endl;
     
@@ -44,6 +63,8 @@ int main()
     
     
     // unordered set
+    // order na hoy
+    // inbuilt implementation -> hash table
     unordered_set<int> uns1;
     
     uns1.insert(100);
@@ -69,13 +90,13 @@ int main()
 
     // multiset
 
-    multiset<int> s1;
-    s1.insert(10);
-    s1.insert(21);
-    s1.insert(21);
-    s1.insert(10);
+    multiset<int> multi_s1;
+    multi_s1.insert(10);
+    multi_s1.insert(21);
+    multi_s1.insert(21);
+    multi_s1.insert(10);
     
-    for(auto it:s1){
+    for(auto it:multi_s1){
         cout<<it<<" ";
     }
     return 0;

@@ -1,5 +1,46 @@
 #include <bits/stdc++.h>
 using namespace std;
+/*
+vector<int> v;
+
+v.push_back(12);            //O(1)
+v.pop_back();               //O(1)
+vector<int> oza = v;        //O(n)
+vector<int> &oza1 = v;
+
+// vector ahiya pass by value (copy) chhe
+// O(n)
+void func1(vector<int> oza){
+...
+...
+...
+}
+
+// vector ahiya pass by reference chhe
+void func1(vector<int> &oza){
+...
+...
+... 
+}
+
+
+makes copy of elements
+//O(n)
+for(auto it:oza){
+...
+...
+...
+}
+
+// pass by reference
+for(auto &it:oza){
+...
+...
+...
+}
+
+*/
+
 
 int main()
 {
@@ -8,6 +49,9 @@ int main()
     for(int i=0;i<5;i++){
         v1.push_back(i);
     }
+    
+    // size
+    cout<<v1.size()<<endl;
     
     for(auto it=v1.begin();it!=v1.end();it++){
         cout<<*it<<" ";

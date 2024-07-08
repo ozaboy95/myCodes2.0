@@ -5,6 +5,10 @@ int main()
 {   
    // map
    // sorting order + unique key
+   // inbuilt implementation -> red-black tree
+   // insert                O(nlogn)
+   // printing              O(nlogn)
+   // finding one element   O(logn)
    
    map<string,int> m1;
    m1["harsh"]=1;
@@ -13,6 +17,7 @@ int main()
    m1["suresh"]=450;
    m1["harsh"]=98;
    m1.emplace("shreeram",3378);
+   m1.insert({"harshoza",95});
    
    for(auto it:m1){
        cout<<it.first<<" - "<<it.second<<endl;
@@ -27,11 +32,22 @@ int main()
    cout<<"\n";
 
    //finding key-value pair by key
-   auto it = m1.find("harsh");
+   auto it = m1.find("harsh"); // find return iterator 
+   if(it==m1.end()){
+     cout<<"Not found"<<endl;
+   }else{
+     cout<<"Element found\n";
+     cout<<it->first<<" "<<it->second<<endl;
+   }
    
    
    // unordered map
    // no sorting + unique key
+   // inbuilt implementation -> hash table 
+   // insertion   -> O(1) 
+   // deletion    -> O(1) 
+   // find        -> O(1)
+   // erase       -> O(1)
    
    unordered_map<int,int> unordered_m1;
    unordered_m1[10]=100;
@@ -46,6 +62,7 @@ int main()
    
    //multimap
    //sorting order + multiple key
+   // we can store duplicate key / key unique na hoy
    multimap<string,int> multimap_m1;
    multimap_m1.insert({"one",111});
    multimap_m1.insert({"two",234});
